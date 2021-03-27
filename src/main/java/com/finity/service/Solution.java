@@ -76,7 +76,7 @@ public class Solution {
 				sum += prices[i];
 			}
 		}
-		int result = (int)Math.ceil(sum);
+		int result = (int)Math.floor(sum);
 		LOGGER.info("Total sum " + result);
 		return result;
 	}
