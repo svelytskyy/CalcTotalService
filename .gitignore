@@ -6,3 +6,6 @@ bin
 
 # Ignore Gradle build output directory
 build
+
+#Ignore doc
+doc

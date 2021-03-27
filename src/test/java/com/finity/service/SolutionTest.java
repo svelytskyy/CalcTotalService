@@ -36,7 +36,12 @@ public class SolutionTest {
 		//Test case #5 only 1 item in busket price
 		discount = 25;
 		prices = new int[]{100};
-		assertTrue("First test case",Solution.calculateTotalPrice(prices, discount)==75);			
+		assertTrue("First test case",Solution.calculateTotalPrice(prices, discount)==75);	
+		
+		//Test case #6 round down
+		discount = 10;
+		prices = new int[]{1000, 2012,400, 1000, 100};
+		assertTrue("First test case",Solution.calculateTotalPrice(prices, discount)==4310);		
 	}
 
 }

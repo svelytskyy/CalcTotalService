@@ -4,6 +4,14 @@ import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * 
+ * @author Sergiy Velytskyy
+ *
+ *	discount of "discount%" the most expensive item purchased by a given customer during the sales period.
+ *  calculation of the total purchase price as an integer
+ */
+
 public class Solution {
 	
 	private static final int MAX_PRICE = 100000;
@@ -21,6 +29,12 @@ public class Solution {
 		LOGGER.setLevel(Level.INFO);
 	}
 	
+	/**
+	 * 
+	 * @param prices - price busket
+	 * @param discount - discount for max priced item
+	 * @return - sum of price busket
+	 */
 	public static int calculateTotalPrice(int[] prices, int discount) {
 		
 		try {
@@ -55,6 +69,7 @@ public class Solution {
 		float sum = 0;
 		for(int i = 0; i < prices.length; i++) {
 			if(i == prices.length-1) {
+				//discounting max price
 				sum += prices[i]* (1- ((float)(discount)/100));
 			}
 			else {
